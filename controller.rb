@@ -22,10 +22,22 @@ get '/calculate' do
   erb :result
 end
 
+get '/submit' do
+  @name = params[:name]
+  @email = params[:email]
+  @message = params[:message]
+
+  erb :thank_you
+end
+
 get '/' do
   erb :home
 end
 
 get '/about_us' do
   erb :about_us
+end
+
+get '/contact' do
+  erb :contact
 end
