@@ -1,4 +1,4 @@
-
+<% if @name != '' && @email != '' && @message != '' %>
   <section>
     <header>
       <h1>Thank you for submitting your details</h1>
@@ -8,3 +8,6 @@
     <p>Your email is: <%= @email %></p>
     <p>Your message is: <%= @message %></p>
   </section>
+<% else %>
+  <p>Sorry, one or more of the fields was empty - try again...</p>  
+<% end %>
